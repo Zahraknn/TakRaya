@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>پروژه‌های تک‌رایا</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="inner-page projects-page">
+    <header class="header" id="header">
+        <a class="brand brand-logo" href="index.html#home"><img src="assets/takraya-logo.svg" alt="لوگوی تک‌رایا"><span
+                class="brand-text"><b>تک‌رایا</b><small>راهکارهای دیجیتال</small></span></a>
+        <nav class="nav" id="nav"><a href="index.html#about">درباره ما</a><a href="index.html#services">خدمات</a><a
+                href="projects.html">پروژه‌ها</a><a href="index.html#skills">تخصص‌ها</a><a
+                href="index.html#team">همکاران</a><a href="index.html#contact">تماس با ما</a></nav>
+        <a class="btn btn-primary header-cta" href="index.html#consultation">درخواست مشاوره</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="باز کردن منو" aria-expanded="false"
+            aria-controls="nav"><i class="fa-solid fa-bars"></i></button>
+    </header>
+    <main>
+        <section class="projects-title">
+            <div class="container">
+                <h1>پروژه‌های تک‌رایا</h1>
+                <p>بخشی از پروژه‌های انجام‌شده و در حال توسعه ما.</p>
+            </div>
+        </section>
+        <section class="projects-list-section">
+            <div class="container">
+                <div class="project-grid projects-reference-grid" id="allProjects"></div>
+                <div class="projects-consult-cta"><span>پروژه‌ای مشابه در ذهن دارید؟</span><a class="btn btn-primary"
+                        href="index.html#consultation">درخواست مشاوره <i class="fa-solid fa-arrow-left"></i></a></div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-bottom"><span>تمامی حقوق این وب‌سایت متعلق به شرکت تک‌رایا است.</span><span>ساخته
+                شده با <i class="fa-solid fa-heart"></i> توسط تک‌رایا</span></div>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.querySelector('#allProjects');
+            grid.innerHTML = projects.filter((p) => [1, 5].includes(p.id)).map(projectCard).join('');
+            requestAnimationFrame(refreshReveal);
+        });
+    </script>
+</body>
+
+</html>

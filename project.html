@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>پروژه | تک‌رایا</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="inner-page project-page">
+  <header class="header" id="header">
+    <a class="brand brand-logo" href="index.html#home"><img src="assets/takraya-logo.svg" alt="لوگوی تک‌رایا"><span
+        class="brand-text"><b>تک‌رایا</b><small>راهکارهای دیجیتال</small></span></a>
+    <nav class="nav" id="nav"><a href="index.html#about">درباره ما</a><a href="index.html#services">خدمات</a><a
+        href="projects.html">پروژه‌ها</a><a href="index.html#skills">تخصص‌ها</a><a href="index.html#team">همکاران</a><a
+        href="index.html#contact">تماس با ما</a></nav>
+    <a class="btn btn-primary header-cta" href="index.html#consultation">درخواست مشاوره</a>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="باز کردن منو" aria-expanded="false"
+      aria-controls="nav"><i class="fa-solid fa-bars"></i></button>
+  </header>
+  <main id="projectDetail"></main>
+  <footer class="footer">
+    <div class="container footer-bottom"><span>تمامی حقوق این وب‌سایت متعلق به شرکت تک‌رایا است.</span><span>ساخته شده
+        با <i class="fa-solid fa-heart"></i> توسط تک‌رایا</span></div>
+  </footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const id = new URLSearchParams(location.search).get('id') || '1';
+      const p = projects.find(x => String(x.id) === id) || projects[0];
+      document.title = p.title + ' | تک‌رایا';
+      document.querySelector('#projectDetail').innerHTML = `
+ <section class="project-detail-head"><div class="container project-head-inner">
+   <a class="back-projects" href="projects.html"><i class="fa-solid fa-arrow-left"></i> بازگشت به پروژه‌ها</a>
+   <h1>${p.title}</h1>
+ </div></section>
+ <section class="project-showcase"><div class="container showcase-grid">
+   <aside class="project-info-card">
+    <h2>اطلاعات پروژه</h2>
+    <div class="info-row"><span>دسته‌بندی</span><b>${p.categoryLabel}</b></div>
+    <div class="info-row"><span>وضعیت</span><b>${p.status}</b></div>
+    <div class="info-row"><span>تکنولوژی</span><b>${p.tech.join(' · ')}</b></div>
+    <div class="info-row"><span>کارفرما</span><b>${p.company}</b></div>
+    ${p.url ? `<a class="project-view-btn" href="${p.url}" target="_blank" rel="noopener">مشاهده پروژه <i class="fa-solid fa-arrow-left"></i></a>` : ''}
+   </aside>
+   <div class="project-slider-wrap">
+    <div class="project-slider" id="projectSlider"><img id="projectSliderImage" src="${p.image}" alt="تصویر پروژه ${p.title}"><button class="slider-arrow" id="sliderNext" aria-label="تصویر بعدی" title="تصویر بعدی"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button></div>
+    <div class="slider-bottom"><div class="slider-dots" id="sliderDots"></div><b id="sliderCounter">1/1</b></div>
+   </div>
+ </div></section>
+ <section class="project-about-section"><div class="container">
+   <div class="project-about-card"><div class="about-art"><span></span><span></span><span></span><i class="fa-solid fa-gear"></i></div><div class="about-project-text"><h2><span></span>درباره پروژه</h2><p>${p.about}</p><p>${p.description}</p></div></div>
+ </div></section>
+ ${(p.features && p.features.length) ? `<section class="project-features-section"><div class="container"><div class="features-card"><h2><span></span>قابلیت های پروژه</h2><div class="features-list">${p.features.map(f => `<div class="feature-item"><div><i class="fa-solid ${f[0]}"></i></div><span>${f[1]}</span></div>`).join('')}</div></div></div></section>` : ''}
+ `;
+      const gallery = Array.isArray(p.gallery) && p.gallery.length ? p.gallery : [p.image];
+      const img = document.getElementById('projectSliderImage');
+      const next = document.getElementById('sliderNext');
+      const dots = document.getElementById('sliderDots');
+      const counter = document.getElementById('sliderCounter');
+      let current = 0;
+      function renderSlide() {
+        img.src = gallery[current];
+        img.alt = `تصویر ${current + 1} پروژه ${p.title}`;
+        counter.textContent = `${current + 1}/${gallery.length}`;
+        dots.innerHTML = gallery.map((_, i) => `<span class="${i === current ? 'active' : ''}"></span>`).join('');
+        next.style.display = gallery.length > 1 ? 'grid' : 'none';
+      }
+      next.addEventListener('click', () => { current = (current + 1) % gallery.length; renderSlide() });
+      dots.addEventListener('click', e => { const i = [...dots.children].indexOf(e.target); if (i >= 0) { current = i; renderSlide() } });
+      renderSlide();
+      requestAnimationFrame(refreshReveal);
+    });
+  </script>
+</body>
+
+</html>

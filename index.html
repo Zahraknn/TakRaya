@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description"
+    content="تک‌رایا؛ طراحی و توسعه راهکارهای نرم‌افزاری، وب‌سایت، فروشگاه، اپلیکیشن و نرم‌افزارهای اختصاصی.">
+  <title>تک‌رایا | راهکارهای دیجیتال</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+  <div id="progress"></div>
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand brand-logo" href="#home" aria-label="تک‌رایا، صفحه اصلی">
+        <img src="assets/takraya-logo.svg" alt="لوگوی تک‌رایا">
+        <span>تک‌رایا</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="باز کردن منو" aria-expanded="false"
+        aria-controls="main-nav"><span></span><span></span><span></span></button>
+      <nav class="main-nav" id="main-nav" aria-label="ناوبری اصلی">
+        <a href="#home">خانه</a>
+        <a href="#about">درباره ما</a>
+        <a href="#services">خدمات</a>
+        <a href="#skills">تخصص‌ها</a>
+        <a href="#projects">پروژه‌ها</a>
+        <a href="#companies">شرکای ما</a>
+        <a href="#team">همکاران</a>
+      </nav>
+      <a class="button button-small button-dark nav-contact" href="#contact">تماس با ما <span
+          aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main>
+    <!-- ==================== بخش هیرو / معرفی اصلی سایت ==================== -->
+    <section class="hero hero-v1" id="home">
+      <div class="hero-v1-bg" aria-hidden="true">
+        <span class="hero-grid-line hero-grid-line-1"></span><span class="hero-grid-line hero-grid-line-2"></span><span
+          class="hero-grid-line hero-grid-line-3"></span>
+        <span class="hero-glow hero-glow-a"></span><span class="hero-glow hero-glow-b"></span>
+      </div>
+      <div class="hero-v1-grid">
+        <!-- متن و دکمه‌های اصلی هیرو -->
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> همراه شما در مسیر تحول دیجیتال</p>
+          <h1>ایده‌ها را وقتی <span>به فناوری</span> می‌سپاریم،<br class="desktop-only"> به <span>واقعیت</span> تبدیل
+            می‌شوند.</h1>
+          <p class="hero-lead">از اولین جرقه‌ی یک ایده تا ساخت محصولی کاربردی، کنار شما هستیم؛ با طراحی هوشمندانه و
+            راهکارهای نرم‌افزاری متناسب با نیازتان.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#consultation">درخواست مشاوره <span>↗</span></a>
+            <a class="button button-light" href="#services">مشاهده خدمات <span>↓</span></a>
+          </div>
+          <div class="hero-note"><span class="note-line"></span> فکر خلاق، اجرای دقیق، نتیجه ماندگار</div>
+        </div>
+        <!-- ویژوال تکنولوژی هیرو؛ بدون عکس و جدا از محدوده متن -->
+        <div class="hero-visual hero-tech-visual reveal" aria-label="ویژوال فناوری تک‌رایا">
+          <div class="hero-tech-orbit orbit-one"></div>
+          <div class="hero-tech-orbit orbit-two"></div>
+          <div class="hero-tech-core"><span class="core-mark">TR</span><span
+              class="core-label">DIGITAL<br>ENGINEERING</span></div>
+          <span class="hero-tech-node node-a"><i class="fa-solid fa-code"></i><b>Code</b></span>
+          <span class="hero-tech-node node-b"><i class="fa-solid fa-layer-group"></i><b>Build</b></span>
+          <span class="hero-tech-node node-c"><i class="fa-solid fa-shield-halved"></i><b>Secure</b></span>
+          <span class="hero-tech-node node-d"><i class="fa-solid fa-bolt"></i><b>Scale</b></span>
+          <span class="hero-tech-pulse pulse-a"></span><span class="hero-tech-pulse pulse-b"></span>
+        </div>
+      </div>
+    </section>
+    <!-- ==================== آمار و دستاوردهای تک‌رایا ==================== -->
+    <section class="stats stats-v2">
+      <div class="container stats-grid">
+        <div class="stat"><strong data-count="20">0</strong><span>پروژه و تجربه اجرایی</span></div>
+        <div class="stat"><strong data-count="8">0</strong><span>حوزه تخصصی</span></div>
+        <div class="stat"><strong data-count="4">0</strong><span>پلتفرم توسعه</span></div>
+        <div class="stat"><strong data-count="100">0</strong><span>% تعهد به کیفیت</span></div>
+      </div>
+    </section>
+    <!-- ==================== بخش درباره ما ==================== -->
+    <section class="section about-new" id="about">
+      <div class="container">
+        <div class="about-new-card reveal">
+          <div class="about-new-visual" aria-hidden="true">
+            <div class="about-glow"></div>
+            <div class="about-window">
+              <div class="about-window-top"><span></span><span></span><span></span></div>
+              <div class="about-code"><i class="fa-solid fa-code"></i><b>Takraya</b><small>Digital Solutions</small>
+              </div>
+              <div class="about-lines"><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="about-float about-float-a"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="about-float about-float-b"><i class="fa-solid fa-gear"></i></div>
+          </div>
+          <div class="about-new-copy">
+            <span class="section-kicker">درباره ما</span>
+            <h2>تک‌رایا؛ جایی برای تبدیل <strong>ایده به محصول</strong></h2>
+            <p>تک‌رایا یک مجموعه نرم‌افزاری است که روی طراحی و توسعه راهکارهای دیجیتال متناسب با نیاز واقعی کسب‌وکارها
+              تمرکز دارد؛ از وب‌سایت و فروشگاه تا اپلیکیشن و سامانه‌های اختصاصی.</p>
+            <p>هدف ما ساخت محصولاتی است که فقط ظاهر خوبی نداشته باشند؛ بلکه سریع، قابل توسعه، قابل استفاده و متناسب با
+              فرآیند واقعی هر کسب‌وکار باشند.</p>
+            <div class="about-new-points">
+              <div><i class="fa-solid fa-bullseye"></i><span><b>نیازمحور</b><small>راهکار بر اساس مسئله
+                    واقعی</small></span></div>
+              <div><i class="fa-solid fa-code"></i><span><b>فنی و دقیق</b><small>توسعه با ساختار قابل
+                    اتکا</small></span></div>
+              <div><i class="fa-solid fa-arrows-rotate"></i><span><b>قابل توسعه</b><small>آماده برای رشد و
+                    تغییر</small></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==================== بخش خدمات ==================== -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-heading center reveal"><span class="section-kicker">خدمات ما</span>
+          <h2>راهکاری متناسب با <strong>نیاز شما</strong></h2>
+          <p>از یک وب‌سایت ساده تا یک سامانه اختصاصی، مسیر توسعه را با شما جلو می‌بریم.</p>
+        </div>
+        <div class="service-grid" id="serviceGrid"></div>
+      </div>
+    </section>
+    <!-- ==================== بخش تخصص‌ها و تکنولوژی‌های فنی ==================== -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-heading center reveal"><span class="section-kicker">Technology Stack</span>
+          <h2>تخصص‌های <strong>فنی تک‌رایا</strong></h2>
+          <p>ترکیبی از توسعه وب، Backend، موبایل، دسکتاپ و طراحی محصول.</p>
+        </div>
+        <div class="skills-stage reveal">
+          <div class="skill-lines"></div>
+          <div class="skill-center"><i class="fa-solid fa-code"></i><span>تک‌رایا</span><small>Software
+              Development</small></div>
+          <div class="skill-node n1"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+          <div class="skill-node n2"><i class="fa-solid fa-server"></i><span>Express.js</span></div>
+          <div class="skill-node n3"><i class="fa-solid fa-layer-group"></i><span>NestJS</span></div>
+          <div class="skill-node n4"><i class="fa-brands fa-java"></i><span>Java</span></div>
+          <div class="skill-node n5"><i class="fa-solid fa-leaf"></i><span>Spring Boot</span></div>
+          <div class="skill-node n6"><i class="fa-brands fa-react"></i><span>React</span></div>
+          <div class="skill-node n7"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+          <div class="skill-node n8"><i class="fa-solid fa-code"></i><span>TypeScript</span></div>
+          <div class="skill-node n9"><i class="fa-brands fa-html5"></i><span>HTML / CSS</span></div>
+          <div class="skill-node n10"><i class="fa-solid fa-n"></i><span>Next.js</span></div>
+          <div class="skill-node n11"><i class="fa-brands fa-android"></i><span>Android Studio</span></div>
+          <div class="skill-node n12"><i class="fa-solid fa-desktop"></i><span>Electron.js</span></div>
+        </div>
+        <div class="platforms reveal">
+          <div><i class="fa-solid fa-globe"></i><b>Web</b><span>سایت و وب‌اپلیکیشن</span></div>
+          <div><i class="fa-solid fa-gears"></i><b>Backend</b><span>API و سیستم‌های سازمانی</span></div>
+          <div><i class="fa-solid fa-mobile-screen"></i><b>Mobile</b><span>اپلیکیشن اندروید</span></div>
+          <div><i class="fa-solid fa-desktop"></i><b>Desktop</b><span>نرم‌افزار دسکتاپ</span></div>
+        </div>
+      </div>
+    </section>
+    <!-- ==================== بخش پروژه‌ها و نمونه‌کارها ==================== -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-heading split reveal">
+          <div><span class="section-kicker">نمونه‌کارها</span>
+            <h2>پروژه‌هایی که <strong>ساخته‌ایم</strong></h2>
+          </div><a class="text-link" href="projects.html">مشاهده همه پروژه‌ها <i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+        <div class="project-grid" id="projectGrid"></div>
+      </div>
+    </section>
+
+
+    <!-- ==================== بخش شرکای ما ==================== -->
+    <section class="section companies" id="companies">
+      <div class="container">
+        <div class="section-heading center reveal"><span class="section-kicker">همکاری</span>
+          <h2>شرکت‌هایی که به ما <strong>اعتماد کرده‌اند</strong></h2>
+        </div>
+        <div class="company-grid" id="companyGrid"></div>
+      </div>
+    </section>
+    <!-- ==================== بخش تیم و همکاران تک‌رایا: نام اعضای تیم از فایل js/data.js خوانده می‌شود ==================== -->
+    <section class="section team" id="team">
+      <div class="container">
+        <div class="section-heading split reveal">
+          <div><span class="section-kicker">تیم تک‌رایا</span>
+            <h2>افرادی که پشت <strong>محصولات</strong> هستند</h2>
+          </div>
+          <p>تیم ما ترکیبی از توسعه، مدیریت پروژه و نگاه محصول است.</p>
+        </div>
+        <div class="team-grid" id="teamGrid"></div>
+      </div>
+    </section>
+    <!-- ==================== بخش روند همکاری ==================== -->
+    <section class="section process">
+      <div class="container">
+        <div class="section-heading center reveal"><span class="section-kicker">روند همکاری</span>
+          <h2>از ایده تا <strong>اجرا</strong></h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-step reveal"><b>01</b><i class="fa-solid fa-comments"></i>
+            <h3>مشاوره</h3>
+            <p>نیاز و هدف پروژه را بررسی می‌کنیم.</p>
+          </div>
+          <div class="process-step reveal"><b>02</b><i class="fa-solid fa-compass-drafting"></i>
+            <h3>طراحی</h3>
+            <p>راهکار، تجربه کاربری و ساختار فنی مشخص می‌شود.</p>
+          </div>
+          <div class="process-step reveal"><b>03</b><i class="fa-solid fa-code"></i>
+            <h3>توسعه</h3>
+            <p>پیاده‌سازی مرحله‌به‌مرحله و قابل تست.</p>
+          </div>
+          <div class="process-step reveal"><b>04</b><i class="fa-solid fa-rocket"></i>
+            <h3>تحویل و پشتیبانی</h3>
+            <p>استقرار، آموزش و توسعه‌های بعدی.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ==================== بخش درخواست مشاوره ==================== -->
+    <section class="section consultation-section" id="consultation">
+      <div class="container">
+        <div class="consultation-card reveal">
+          <div class="consultation-copy">
+            <span class="section-kicker">درخواست مشاوره</span>
+            <h2>برای شروع پروژه‌تان <strong>با ما صحبت کنید.</strong></h2>
+            <p>اگر ایده، نیاز یا پروژه‌ای دارید، اطلاعات اولیه را با ما در میان بگذارید تا مسیر مناسب اجرا را با هم
+              بررسی کنیم.</p>
+            <div class="consultation-points">
+              <div><i class="fa-solid fa-comments"></i><span>بررسی اولیه نیاز</span></div>
+              <div><i class="fa-solid fa-compass-drafting"></i><span>پیشنهاد مسیر اجرا</span></div>
+              <div><i class="fa-solid fa-file-signature"></i><span>برآورد و برنامه‌ریزی</span></div>
+            </div>
+          </div>
+          <form class="consultation-form" id="consultationForm">
+            <div class="consultation-form-head">
+              <div class="consultation-icon"><i class="fa-solid fa-paper-plane"></i></div>
+              <div>
+                <h3>درخواست خود را بنویسید</h3>
+                <p>اطلاعات اولیه پروژه را وارد کنید تا با شما تماس بگیریم.</p>
+              </div>
+            </div>
+            <div class="consultation-fields">
+              <label><span>نام و نام خانوادگی</span><input type="text" name="name" placeholder="مثلاً زهرا کاظمی"
+                  required></label>
+              <label><span>شماره تماس</span><input type="tel" name="phone" placeholder="۰۹۱۲۱۲۳۴۵۶۷" required></label>
+              <label><span>نوع پروژه</span><select name="type">
+                  <option value="">انتخاب کنید</option>
+                  <option>وب‌سایت</option>
+                  <option>اپلیکیشن</option>
+                  <option>نرم‌افزار اختصاصی</option>
+                  <option>فروشگاه اینترنتی</option>
+                  <option>سایر</option>
+                </select></label>
+              <label class="full"><span>توضیحات درخواست</span><textarea name="message" rows="4"
+                  placeholder="ایده یا نیازتان را برای ما بنویسید..."></textarea></label>
+            </div>
+            <button class="button button-dark consultation-submit" type="submit">ارسال درخواست <span>↗</span></button>
+            <small class="consultation-note">پس از ارسال، برنامه ایمیل شما برای تکمیل و ارسال درخواست باز
+              می‌شود.</small>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- ==================== بخش تماس با ما / اطلاعات ارتباطی ==================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-heading center reveal">
+          <span class="section-kicker">تماس با ما</span>
+          <h2>راه‌های <strong>ارتباط با تک‌رایا</strong></h2>
+          <p>برای ارتباط مستقیم، دریافت اطلاعات بیشتر یا شروع یک گفت‌وگو می‌توانید از راه‌های زیر با ما در تماس باشید.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <a class="contact-card reveal" href="tel:04133871015"><span class="contact-icon"><i
+                class="fa-solid fa-phone"></i></span><span><small>تلفن ثابت</small><strong
+                dir="ltr">۰۴۱۳۳۸۷۱۰۱۵</strong></span></a>
+          <div class="contact-card reveal"><span class="contact-icon"><i
+                class="fa-solid fa-location-dot"></i></span><span><small>آدرس</small><strong>تبریز - چهار راه منصور -
+                پاساژ ابریشم - طبقه یک</strong></span></div>
+          <a class="contact-card contact-card-cta reveal" href="#consultation"><span class="contact-icon"><i
+                class="fa-solid fa-paper-plane"></i></span><span><small>شروع همکاری</small><strong>ارسال درخواست مشاوره
+                <b>↗</b></strong></span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- ==================== فوتر و اطلاعات ارتباطی سایت ==================== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand"><a class="brand brand-logo" href="#home"><img src="assets/takraya-logo-footer.svg"
+            alt="لوگوی تک‌رایا"><span class="brand-text"><b>تک‌رایا</b><small>راهکارهای دیجیتال</small></span></a>
+        <p>طراحی و توسعه راهکارهای نرم‌افزاری برای کسب‌وکارها.</p>
+      </div>
+      <div>
+        <h4>دسترسی سریع</h4><a href="#services">خدمات</a><a href="#projects">پروژه‌ها</a><a href="#skills">تخصص‌ها</a><a
+          href="#team">تیم</a>
+      </div>
+      <div>
+        <h4>بخش‌ها</h4><a href="#about">درباره ما</a><a href="#companies">شرکا</a><a href="#team">همکاران</a><a
+          href="#contact">تماس</a>
+      </div>
+      <div>
+        <h4>ارتباط</h4><a href="mailto:info@takraya.ir">info@takraya.ir</a><a href="tel:09143081984">همراه:
+          ۰۹۱۴۳۰۸۱۹۸۴</a><a href="tel:04133871015">ثابت: ۰۴۱۳۳۸۷۱۰۱۵</a>
+        <p class="footer-address">تبریز - چهار راه منصور - پاساژ ابریشم - طبقه یک</p><a href="#consultation">درخواست
+          مشاوره</a>
+        <div class="socials"><a href="javascript:void(0)" aria-label="Instagram" aria-disabled="true" title="به‌زودی"><i
+              class="fa-brands fa-instagram"></i></a><a href="javascript:void(0)" aria-label="Telegram"
+            aria-disabled="true" title="به‌زودی"><i class="fa-brands fa-telegram"></i></a><a href="javascript:void(0)"
+            aria-label="LinkedIn" aria-disabled="true" title="به‌زودی"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Takraya — تمامی حقوق محفوظ است.</span><span>ساخته شده با <i
+          class="fa-solid fa-heart"></i> توسط تک‌رایا</span></div>
+  </footer>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("consultationForm");
+      if (!form) return;
+      form.addEventListener("submit", e => {
+        e.preventDefault();
+        const fd = new FormData(form);
+        const subject = encodeURIComponent("درخواست مشاوره جدید از سایت تک‌رایا");
+        const body = encodeURIComponent(`نام: ${fd.get("name")}\nشماره تماس: ${fd.get("phone")}\nنوع پروژه: ${fd.get("type") || "تعیین نشده"}\n\nتوضیحات:\n${fd.get("message") || "-"}`);
+        window.location.href = `mailto:info@takraya.ir?subject=${subject}&body=${body}`;
+      });
+    });
+  </script>
+</body>
+
+</html>
