@@ -18,7 +18,8 @@
         <a class="brand brand-logo" href="index.html#home"><img src="assets/takraya-logo.svg" alt="لوگوی تک‌رایا"><span
                 class="brand-text"><b>تک‌رایا</b><small>راهکارهای دیجیتال</small></span></a>
         <nav class="nav" id="nav"><a href="index.html#about">درباره ما</a><a href="index.html#services">خدمات</a><a
-                href="projects.html">پروژه‌ها</a><a href="index.html#skills">تخصص‌ها</a><a href="index.html#contact">تماس با ما</a></nav>
+                href="projects.html">پروژه‌ها</a><a href="index.html#skills">تخصص‌ها</a><a
+                href="index.html#team">همکاران</a><a href="index.html#contact">تماس با ما</a></nav>
         <a class="btn btn-primary header-cta" href="index.html#consultation">درخواست مشاوره</a>
         <button class="menu-toggle" id="menuToggle" type="button" aria-label="باز کردن منو" aria-expanded="false"
             aria-controls="nav"><i class="fa-solid fa-bars"></i></button>
@@ -47,7 +48,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const grid = document.querySelector('#allProjects');
-            grid.innerHTML = projects.filter((p) => p.id === 2 || p.id === 5).map(projectCard).join('');
+            grid.innerHTML = projects.filter((p) => [1, 5].includes(p.id)).map(projectCard).join('');
             requestAnimationFrame(refreshReveal);
         });
     </script>
