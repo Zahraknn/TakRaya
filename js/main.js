@@ -3,16 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     $$ = (s) => document.querySelectorAll(s);
   const serviceGrid = $("#serviceGrid"),
     projectGrid = $("#projectGrid"),
-    companyGrid = $("#companyGrid"),
-    teamGrid = $("#teamGrid");
+    companyGrid = $("#companyGrid");
   if (serviceGrid) serviceGrid.innerHTML = services.map(serviceCard).join("");
   if (projectGrid)
-    projectGrid.innerHTML = projects
-      .filter((p) => [1, 5].includes(p.id))
-      .map(projectCard)
-      .join("");
+    projectGrid.innerHTML = projects.filter((p) => p.id === 2 || p.id === 5).map(projectCard).join("");
   if (companyGrid) companyGrid.innerHTML = companies.map(companyCard).join("");
-  if (teamGrid) teamGrid.innerHTML = team.map(teamCard).join("");
 
   const toggle = $("#menuToggle"),
     nav = $("#main-nav") || $("#nav");
@@ -79,31 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
     io.observe(el);
   });
 
-  const dot = $(".cursor-dot"),
-    ring = $(".cursor-ring");
-  if (matchMedia("(pointer:fine)").matches && dot && ring) {
-    addEventListener("mousemove", (e) => {
-      dot.style.left = e.clientX + "px";
-      dot.style.top = e.clientY + "px";
-      ring.style.left = e.clientX + "px";
-      ring.style.top = e.clientY + "px";
-    });
-    $$(
-      "a,.btn,.project-card,.service-card,.company-card,.team-card,.skill-node,.collab-card",
-    ).forEach((el) => {
-      el.addEventListener("mouseenter", () => {
-        ring.style.width = "44px";
-        ring.style.height = "44px";
-        ring.style.borderColor = "#79ab8f";
-      });
-      el.addEventListener("mouseleave", () => {
-        ring.style.width = "28px";
-        ring.style.height = "28px";
-        ring.style.borderColor = "rgba(121,171,143,.65)";
-      });
-    });
-  }
-
   $$(".tilt").forEach((card) => {
     if (!matchMedia("(pointer:fine)").matches) return;
     card.addEventListener("mousemove", (e) => {
@@ -141,7 +111,6 @@ function projectCard(p) {
   return `<a class="project-card reveal tilt" href="project.html?id=${p.id}">
     <div class="project-image ${p.image ? "has-project-image" : "project-image-fallback"}">
       ${projectImage}
-      <span class="project-image-icon">${p.icon}</span>
       <span class="project-image-caption">${p.categoryLabel || "نمونه‌کار تک‌رایا"}</span>
     </div>
     <div class="project-body">
@@ -152,9 +121,6 @@ function projectCard(p) {
   </a>`;
 }
 function companyCard(c) {
-  return `<div class="company-card reveal"><div class="company-logo">${c.logo}</div><b>${c.name}</b><span>${c.tag}</span></div>`;
-}
-function teamCard(t) {
-  return `<article class="team-card reveal"><div class="team-photo"><img src="${t.icon}" alt="${t.alt || t.name}" loading="lazy"></div><h3>${t.name}</h3><p>${t.role}</p></article>`;
+  return `<div class="company-card reveal"><div class="company-logo company-logo-placeholder" aria-label="جایگاه لوگو">لوگو</div><b>${c.name}</b><span>${c.tag}</span></div>`;
 }
 setTimeout(refreshReveal, 0);

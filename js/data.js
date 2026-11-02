@@ -37,9 +37,9 @@ const services = [
   },
   {
     icon: "fa-id-card",
-    title: "کارت ویزیت",
-    desc: "طراحی هویت بصری و کارت ویزیت حرفه‌ای متناسب با برند.",
-    price: "۲ میلیون تومان",
+    title: "طراحی کارت ویزیت و پوستر",
+    desc: "طراحی کارت ویزیت حرفه‌ای و پوستر تبلیغاتی، هماهنگ با هویت بصری و نیاز برند شما.",
+    price: "توافقی",
   },
   {
     icon: "fa-graduation-cap",
@@ -53,7 +53,7 @@ const projects = [
   {
     id: 1,
     title: "سیستم مدیریت تولید",
-    company: "ناب الکترونیک",
+    company: "",
     status: "در حال توسعه",
     category: "system",
     categoryLabel: "سیستم اختصاصی",
@@ -65,9 +65,9 @@ const projects = [
       "این سامانه به‌عنوان یک راهکار اختصاصی برای مدیریت فرآیند تولید طراحی شده و بخش‌های مختلف خط تولید را در یک محیط یکپارچه به هم متصل می‌کند. ساختار پروژه به‌گونه‌ای در نظر گرفته شده که امکان توسعه قابلیت‌های جدید در ادامه مسیر وجود داشته باشد.",
     tech: ["NestJS", "PostgreSQL", "JavaScript"],
     icon: "<i class='fa-solid fa-chart-column'></i>",
-    image: "assets/projects/project-1-1.jpg",
-    gallery: ["assets/projects/project-1-1.jpg", "assets/projects/project-1-2.jpg", "assets/projects/project-1-3.jpg"],
-    url: "https://www.nabelec.ir",
+    image: "assets/project-production.jpg",
+    gallery: ["assets/project-production.jpg"],
+    url: "",
     features: [
       ["fa-chart-column", "مدیریت تولید"],
       ["fa-barcode", "بارکد"],
@@ -79,7 +79,7 @@ const projects = [
   {
     id: 2,
     title: "فروشگاه اینترنتی",
-    company: "نمونه مشتری",
+    company: "ناب الکترونیک",
     status: "تکمیل شده",
     category: "shop",
     categoryLabel: "فروشگاه",
@@ -90,8 +90,9 @@ const projects = [
       "در طراحی این فروشگاه تلاش شده مسیر رسیدن کاربر از مشاهده محصول تا ثبت سفارش کوتاه و روشن باشد. ساختار فنی نیز برای اضافه‌شدن امکانات و اتصال به سرویس‌های موردنیاز در آینده آماده شده است.",
     tech: ["HTML", "CSS", "JavaScript"],
     icon: "<i class='fa-solid fa-cart-shopping'></i>",
-    image: "assets/project-shop.jpg",
-    url: "",
+    image: "assets/projects/project-2-1.jpg",
+    gallery: ["assets/projects/project-2-1.jpg", "assets/projects/project-2-2.jpg", "assets/projects/project-2-3.jpg"],
+    url: "https://www.nabelec.ir",
     features: [
       ["fa-cart-shopping", "مدیریت فروشگاه"],
       ["fa-box-open", "مدیریت محصولات"],
@@ -166,7 +167,7 @@ const projects = [
     icon: "<i class='fa-solid fa-globe'></i>",
     image: "assets/projects/project-5-1.jpg",
     gallery: ["assets/projects/project-5-1.jpg", "assets/projects/project-5-2.jpg", "assets/projects/project-5-3.jpg"],
-    url: " https://www.nbelec.ir",
+    url: "https://www.nbelec.ir",
     features: [
       ["fa-desktop", "طراحی Responsive"],
       ["fa-palette", "هویت بصری"],
@@ -178,39 +179,10 @@ const projects = [
 ];
 
 const companies = [
-  { name: "ناب الکترونیک", tag: "طراحی و توسعه بردهای الکترونیکی", logo: "N" },
-  { name: "شرکت همکار ۲", tag: "راهکارهای صنعتی", logo: "T" },
-  { name: "شرکت همکار ۳", tag: "کسب‌وکار و تجارت", logo: "C" },
-  { name: "شرکت همکار ۴", tag: "فناوری و خدمات", logo: "A" },
-];
-
-// ==================== اطلاعات اعضای تیم تک‌رایا ====================
-// ترتیب نمایش از راست به چپ: امیرمحمد، پریا، سروین، زهرا
-const team = [
-  {
-    name: "Amirmohammad.jz ",
-    role: "CEO & Backend Developer",
-    icon: "assets/team-amirmohammad.jpg",
-    alt: "تصویر امیرمحمد، عضو تیم تک‌رایا",
-  },
-  {
-    name: "Parya.vlm",
-    role: "Designer & Backend Developer",
-    icon: "assets/team-sarvin.jpg",
-    alt: "تصویر پریا، عضو تیم تک‌رایا",
-  },
-  {
-    name: "Sarvin.hk",
-    role: "Frontend Developer",
-    icon: "assets/team-pariya-glasses.jpg",
-    alt: "تصویر سروین با عینک، عضو تیم تک‌رایا",
-  },
-  {
-    name: "Zahra.kn",
-    role: "UI/UX Designer",
-    icon: "assets/team-zahra-hijab.jpg",
-    alt: "تصویر زهرا با حجاب، عضو تیم تک‌رایا",
-  },
+  { name: "شرکت بیزینو", tag: "جایگاه لوگوی شرکت", logo: "" },
+  { name: "شرکت چکاد رایان", tag: "جایگاه لوگوی شرکت", logo: "" },
+  { name: "اپرنگ", tag: "جایگاه لوگو", logo: "" },
+  { name: "ناب الکترونیک", tag: "جایگاه لوگوی شرکت", logo: "" },
 ];
 
 function serviceCard(s) {
@@ -224,7 +196,6 @@ function projectCard(p) {
   return `<a class="project-card reveal tilt" href="project.html?id=${p.id}">
     <div class="project-image ${p.image ? "has-project-image" : "project-image-fallback"}">
       ${projectImage}
-      <span class="project-image-icon">${p.icon}</span>
       <span class="project-image-caption">${p.categoryLabel || "نمونه‌کار تک‌رایا"}</span>
     </div>
     <div class="project-body">
@@ -235,8 +206,5 @@ function projectCard(p) {
   </a>`;
 }
 function companyCard(c) {
-  return `<div class="company-card reveal"><div class="company-logo">${c.logo}</div><b>${c.name}</b><span>${c.tag}</span></div>`;
-}
-function teamCard(t) {
-  return `<article class="team-card reveal"><div class="team-photo"><img src="${t.icon}" alt="${t.alt || t.name}" loading="lazy"></div><div class="team-card-body"><h3>${t.name}</h3><p>${t.role}</p></div></article>`;
+  return `<div class="company-card reveal"><div class="company-logo company-logo-placeholder" aria-label="جایگاه لوگو">لوگو</div><b>${c.name}</b><span>${c.tag}</span></div>`;
 }
